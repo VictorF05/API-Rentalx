@@ -1,8 +1,8 @@
-import { Specification } from "../model/Specification";
+import { Specification } from "../../model/Specification";
 import {
     ICreateSpecificationDTO,
     ISpecificationsRepository,
-} from "./ISpecificationsRepository";
+} from "../ISpecificationsRepository";
 
 class SpecificationsRepository implements ISpecificationsRepository {
     private specifications: Specification[];
@@ -31,6 +31,10 @@ class SpecificationsRepository implements ISpecificationsRepository {
         });
 
         this.specifications.push(specification);
+    }
+
+    list(): Specification[] {
+        return this.specifications;
     }
 
     findByName(name: string): Specification {
