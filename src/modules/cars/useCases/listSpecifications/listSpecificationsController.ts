@@ -5,7 +5,7 @@ import { ListSpecificationsUseCase } from "./listSpecificationsUseCase";
 class ListSpecificationsController {
     constructor(private listSpecificationsUseCase: ListSpecificationsUseCase) {}
 
-    handle(request: Request, response: Response) {
+    handle(request: Request, response: Response): Response {
         const specifications = this.listSpecificationsUseCase.execute();
 
         return response.json(specifications);
