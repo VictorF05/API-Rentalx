@@ -10,4 +10,4 @@ interface ICategoriesRepository {
     list(): Category[];
     create({ name, description }: ICreateCategoryDTO): void;
 }
-export { ICategoriesRepository, ICreateCategoryDTO };
+export { ICreateCategoryDTO, ICategoriesRepository };
